@@ -191,8 +191,16 @@ a{color:inherit;}
 }
 .sys-media img{
   display:block;
-  width:auto;
+  width:100%;
   height:auto;
+  max-height:420px;
+  object-fit:contain;
+  background:var(--surface);
+  margin:0 auto;
+}
+.sys-media.flush img{
+  max-height:none;
+  background:transparent;
 }
 .sys-media figcaption{
   font-family:var(--mono); font-size:11.5px; color:var(--text-dim);
