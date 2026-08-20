@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tefamod — Project Systems</title>
+<meta name="description" content="Projects by tefamod — backend systems, machine learning, and data products.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#top">
+      <span class="brand-dot" aria-hidden="true"></span>
+      tefamod<span class="brand-caret">_</span>
+    </a>
+    <nav class="topnav">
+      <a href="#systems">systems</a>
+      <a href="#about">about</a>
+      <a href="https://github.com/tefamod" target="_blank" rel="noopener">github ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO / STATUS TICKER -->
+  <section class="hero wrap">
+    <p class="eyebrow">// project status board</p>
+    <h1 class="hero-title">
+      Building backend systems,<br>
+      ML models &amp; data tools —<br>
+      <span class="accent">one repo at a time.</span>
+    </h1>
+    <p class="hero-sub">
+      A running log of what I've shipped: production backends for two live mobile apps,
+      a handful of machine-learning experiments, and one dashboard nobody asked for
+      but everybody now uses.
+    </p>
+
+    <div class="status-strip" id="statusStrip">
+      <div class="status-item">
+        <span class="status-dot dot-live" aria-hidden="true"></span>
+        <span class="status-num">2</span>
+        <span class="status-label">in production</span>
+      </div>
+      <div class="status-sep" aria-hidden="true"></div>
+      <div class="status-item">
+        <span class="status-dot dot-idle" aria-hidden="true"></span>
+        <span class="status-num">5</span>
+        <span class="status-label">shipped &amp; archived</span>
+      </div>
+      <div class="status-sep" aria-hidden="true"></div>
+      <div class="status-item">
+        <span class="status-num">7</span>
+        <span class="status-label">repos tracked</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SYSTEMS / PROJECTS -->
+  <section class="systems wrap" id="systems">
+    <div class="section-head">
+      <h2>Systems</h2>
+      <p>Every row below is a real repo. Status reflects whether it's still running in production.</p>
+    </div>
+
+    <div class="log-header" aria-hidden="true">
+      <span class="col-id">ID</span>
+      <span class="col-name">Project</span>
+      <span class="col-stack">Stack</span>
+      <span class="col-status">Status</span>
+    </div>
+
+    <div class="systems-list">
+
+      <!-- AIPT -->
+      <article class="sys-card" data-status="live">
+        <div class="sys-top">
+          <span class="sys-id">SYS-01</span>
+          <span class="sys-status live"><i></i>live</span>
+        </div>
+        <h3 class="sys-name">AIPT — AI Personal Trainer</h3>
+        <p class="sys-desc">
+          Backend for an AI fitness-coaching app. Turns a food photo or a product barcode into a full
+          nutrition breakdown (calories, protein, fat, sugar…), using a rotating pool of Gemini API keys
+          that auto-cools down on rate limits, plus Open Food Facts for barcode lookups. Daily logs are
+          stored per user in Supabase.
+        </p>
+        <ul class="sys-tags">
+          <li>Node.js</li><li>Express</li><li>Supabase</li><li>Gemini AI</li><li>Open Food Facts API</li>
+        </ul>
+        <div class="sys-links">
+          <a href="https://github.com/tefamod/AIPT" target="_blank" rel="noopener">Repo ↗</a>
+          <a href="https://play.google.com/store/apps/details?id=com.cominde.my_coach&hl=ar" target="_blank" rel="noopener">Play Store ↗</a>
+        </div>
+      </article>
+
+      <!-- Fixer -->
+      <article class="sys-card" data-status="live">
+        <div class="sys-top">
+          <span class="sys-id">SYS-02</span>
+          <span class="sys-status live"><i></i>live</span>
+        </div>
+        <h3 class="sys-name">Fixer — Auto Repair Platform</h3>
+        <p class="sys-desc">
+          Backend work for a Cairo auto-service-center platform. Tracks car status, repair progress,
+          service history and next-service reminders, powering both the customer app and the public
+          booking site. Rated 5.0 on the Play Store.
+        </p>
+        <ul class="sys-tags">
+          <li>Backend</li><li>REST API</li><li>Booking system</li><li>Mobile app</li>
+        </ul>
+        <div class="sys-links">
+          <a href="https://fixer.cominde.org/" target="_blank" rel="noopener">Website ↗</a>
+          <a href="https://play.google.com/store/apps/details?id=com.cominde.fixer&hl=ar" target="_blank" rel="noopener">Play Store ↗</a>
+        </div>
+      </article>
+
+      <!-- HR Analytics -->
+      <article class="sys-card" data-status="archived">
+        <div class="sys-top">
+          <span class="sys-id">SYS-03</span>
+          <span class="sys-status archived"><i></i>archived</span>
+        </div>
+        <h3 class="sys-name">HR Analytics Dashboard</h3>
+        <p class="sys-desc">
+          Interactive Power BI dashboard covering workforce data across 5 Middle-East countries —
+          department headcount, gender split, salary KPIs, and hiring trends from 2016 to 2020.
+          689 employees, $1.42M total monthly salary, 20+ departments.
+        </p>
+        <ul class="sys-tags">
+          <li>Power BI</li><li>DAX</li><li>Power Query</li>
+        </ul>
+        <div class="sys-links">
+          <a href="https://github.com/tefamod/hr-analytics-powerbi" target="_blank" rel="noopener">Repo ↗</a>
+        </div>
+      </article>
+
+      <!-- CartPole RL -->
+      <article class="sys-card" data-status="archived">
+        <div class="sys-top">
+          <span class="sys-id">SYS-04</span>
+          <span class="sys-status archived"><i></i>archived</span>
+        </div>
+        <h3 class="sys-name">CartPole — RL Algorithms Compared</h3>
+        <p class="sys-desc">
+          The classic reinforcement-learning balancing problem, solved three different ways —
+          Monte Carlo, SARSA, and Q-Learning — to see how each algorithm learns to keep the pole
+          upright on a moving cart.
+        </p>
+        <ul class="sys-tags">
+          <li>Python</li><li>Reinforcement Learning</li><li>Gymnasium</li>
+        </ul>
+        <div class="sys-links">
+          <a href="https://github.com/tefamod/cartpole_problem_with_montecarlo_sarsa_qlearning" target="_blank" rel="noopener">Repo ↗</a>
+        </div>
+      </article>
+
+      <!-- Video Subtitle Detector -->
+      <article class="sys-card" data-status="archived">
+        <div class="sys-top">
+          <span class="sys-id">SYS-05</span>
+          <span class="sys-status archived"><i></i>archived</span>
+        </div>
+        <h3 class="sys-name">Video Subtitle Detector</h3>
+        <p class="sys-desc">
+          Takes a video with hardcoded subtitles and locates the text: a red box marks the whole
+          subtitle region, and a green box marks each individual word inside it.
+        </p>
+        <ul class="sys-tags">
+          <li>Python</li><li>Computer Vision</li><li>Text Detection</li>
+        </ul>
+        <div class="sys-links">
+          <a href="https://github.com/tefamod/Video_Subtitles_Detector" target="_blank" rel="noopener">Repo ↗</a>
+        </div>
+      </article>
+
+      <!-- Image Colorization -->
+      <article class="sys-card" data-status="archived">
+        <div class="sys-top">
+          <span class="sys-id">SYS-06</span>
+          <span class="sys-status archived"><i></i>archived</span>
+        </div>
+        <h3 class="sys-name">Image Colorization (U-Net)</h3>
+        <p class="sys-desc">
+          A U-Net based deep learning model that takes grayscale photos and predicts plausible
+          color versions of them, end to end.
+        </p>
+        <ul class="sys-tags">
+          <li>Python</li><li>Deep Learning</li><li>U-Net</li>
+        </ul>
+        <div class="sys-links">
+          <a href="https://github.com/tefamod/image-colorization" target="_blank" rel="noopener">Repo ↗</a>
+        </div>
+      </article>
+
+      <!-- Cancer Doctor Assistant -->
+      <article class="sys-card" data-status="archived">
+        <div class="sys-top">
+          <span class="sys-id">SYS-07</span>
+          <span class="sys-status archived"><i></i>archived</span>
+        </div>
+        <h3 class="sys-name">Cancer Doctor Assistant</h3>
+        <p class="sys-desc">
+          A Flutter mobile app that helps doctors detect tumor type from scans. Forked from an
+          existing project and extended as a mobile-dev &amp; Flutter exercise.
+        </p>
+        <ul class="sys-tags">
+          <li>Flutter</li><li>Dart</li><li>Mobile</li><li>Healthcare</li>
+        </ul>
+        <div class="sys-links">
+          <a href="https://github.com/tefamod/CancerDoctorAssistant" target="_blank" rel="noopener">Repo ↗</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about wrap" id="about">
+    <div class="about-inner">
+      <p class="eyebrow">// about</p>
+      <h2>What's running under the hood</h2>
+      <p>
+        I work across backend engineering, machine learning, and data analytics — a mix of shipped
+        production APIs behind live mobile apps, and self-directed notebooks exploring reinforcement
+        learning, computer vision, and deep learning. This page is the log of both.
+      </p>
+      <a class="cta" href="https://github.com/tefamod" target="_blank" rel="noopener">See everything on GitHub ↗</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>tefamod — last deployed <time id="deployDate"></time></span>
+    <a href="https://github.com/tefamod" target="_blank" rel="noopener">github.com/tefamod</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
