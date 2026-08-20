@@ -177,6 +177,49 @@ a{color:inherit;}
 .sys-links a{text-decoration:none; color:var(--accent); border-bottom:1px solid transparent;}
 .sys-links a:hover{border-bottom-color:var(--accent);}
 
+/* ============ Card media (screenshots / demos) ============ */
+.sys-media{
+  margin:16px 0 18px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  overflow:hidden;
+  background:var(--bg);
+}
+.sys-media.flush{
+  border:none;
+  background:transparent;
+}
+.sys-media img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.sys-media figcaption{
+  font-family:var(--mono); font-size:11.5px; color:var(--text-dim);
+  padding:8px 12px; border-top:1px solid var(--border);
+}
+
+.sys-media-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:1px;
+  background:var(--border);
+}
+.sys-media-grid img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  aspect-ratio:460/281;
+  background:var(--surface);
+  cursor:zoom-in;
+  transition:opacity .15s ease;
+}
+.sys-media-grid img:hover{opacity:.85;}
+@media (max-width:520px){
+  .sys-media-grid{grid-template-columns:1fr;}
+}
+
 /* ============ About ============ */
 .about{padding:60px 24px 100px; position:relative; z-index:1;}
 .about-inner{

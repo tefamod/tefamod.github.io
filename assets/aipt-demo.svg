@@ -1,0 +1,84 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', ui-monospace, monospace">
+  <defs>
+    <radialGradient id="glow1" cx="15%" cy="10%" r="60%">
+      <stop offset="0%" stop-color="#5eead4" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#5eead4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="100%" stop-color="#2f8f80"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" rx="12" fill="#14171c" stroke="#23272e"/>
+  <rect width="800" height="450" rx="12" fill="url(#glow1)"/>
+
+  <text x="28" y="38" fill="#5a616d" font-size="12" letter-spacing="1">SYS-01 // AIPT</text>
+  <circle cx="762" cy="33" r="4" fill="#5eead4"/>
+  <text x="742" y="38" fill="#5eead4" font-size="11" text-anchor="end">live</text>
+
+  <!-- phone frame with food photo -->
+  <rect x="60" y="80" width="200" height="300" rx="18" fill="#191d23" stroke="#23272e" stroke-width="2"/>
+  <rect x="76" y="104" width="168" height="150" rx="8" fill="#0b0d10"/>
+  <!-- plate illustration -->
+  <circle cx="160" cy="179" r="58" fill="#23272e"/>
+  <circle cx="160" cy="179" r="46" fill="#14171c"/>
+  <ellipse cx="140" cy="165" rx="20" ry="14" fill="#f2b84b" opacity="0.85"/>
+  <ellipse cx="178" cy="188" rx="16" ry="11" fill="#5eead4" opacity="0.55"/>
+  <ellipse cx="150" cy="200" rx="14" ry="9" fill="#e8eaed" opacity="0.25"/>
+
+  <!-- scan reticle -->
+  <g stroke="#5eead4" stroke-width="2" fill="none">
+    <path d="M76 104 v16 M76 104 h16"/>
+    <path d="M244 104 v16 M244 104 h-16"/>
+    <path d="M76 254 v-16 M76 254 h16"/>
+    <path d="M244 254 v-16 M244 254 h-16"/>
+  </g>
+  <line x1="76" y1="179" x2="244" y2="179" stroke="#5eead4" stroke-width="1.5" opacity="0.7"/>
+
+  <rect x="76" y="270" width="168" height="10" rx="3" fill="#23272e"/>
+  <rect x="76" y="270" width="112" height="10" rx="3" fill="#5eead4"/>
+  <text x="76" y="300" fill="#8b93a1" font-size="11">analyzing photo…</text>
+
+  <!-- arrow -->
+  <path d="M285 220 h55" stroke="#5a616d" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#5a616d"/>
+    </marker>
+  </defs>
+
+  <!-- nutrition readout -->
+  <rect x="366" y="86" width="368" height="288" rx="10" fill="#0b0d10" stroke="#23272e"/>
+  <text x="390" y="118" fill="#e8eaed" font-size="15" font-weight="700">nutrition_breakdown.json</text>
+  <line x1="390" y1="132" x2="710" y2="132" stroke="#23272e"/>
+
+  <!-- rows -->
+  <g font-size="12" fill="#8b93a1">
+    <text x="390" y="164">calories</text>
+    <rect x="390" y="174" width="320" height="10" rx="3" fill="#23272e"/>
+    <rect x="390" y="174" width="260" height="10" rx="3" fill="url(#barGrad)"/>
+    <text x="716" y="184" fill="#e8eaed" font-size="12" text-anchor="end">612 kcal</text>
+
+    <text x="390" y="212">protein</text>
+    <rect x="390" y="222" width="320" height="10" rx="3" fill="#23272e"/>
+    <rect x="390" y="222" width="150" height="10" rx="3" fill="url(#barGrad)"/>
+    <text x="716" y="232" fill="#e8eaed" font-size="12" text-anchor="end">28 g</text>
+
+    <text x="390" y="260">fat</text>
+    <rect x="390" y="270" width="320" height="10" rx="3" fill="#23272e"/>
+    <rect x="390" y="270" width="110" height="10" rx="3" fill="#f2b84b"/>
+    <text x="716" y="280" fill="#e8eaed" font-size="12" text-anchor="end">19 g</text>
+
+    <text x="390" y="308">sugar</text>
+    <rect x="390" y="318" width="320" height="10" rx="3" fill="#23272e"/>
+    <rect x="390" y="318" width="70" height="10" rx="3" fill="#f2b84b"/>
+    <text x="716" y="328" fill="#e8eaed" font-size="12" text-anchor="end">11 g</text>
+  </g>
+
+  <line x1="390" y1="346" x2="710" y2="346" stroke="#23272e"/>
+  <text x="390" y="366" fill="#5eead4" font-size="11">source: gemini-vision · open food facts</text>
+
+  <text x="28" y="424" fill="#e8eaed" font-size="15" font-weight="700">AIPT — AI Personal Trainer</text>
+  <text x="28" y="440" fill="#5a616d" font-size="11">photo/barcode → structured nutrition log</text>
+</svg>
